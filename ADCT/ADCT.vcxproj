@@ -23,23 +23,23 @@
     <ProjectGuid>{744EC953-3EE7-4685-8B5B-0D9532810193}</ProjectGuid>
     <Keyword>MFCProj</Keyword>
     <RootNamespace>ADCT</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v141_xp</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -93,6 +93,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -144,6 +145,8 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <StackReserveSize>10240000</StackReserveSize>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -185,19 +188,47 @@
   <ItemGroup>
     <ClInclude Include="ADCT.h" />
     <ClInclude Include="ADCTDlg.h" />
+    <ClInclude Include="ATOptionDlg.h" />
+    <ClInclude Include="CRC.h" />
+    <ClInclude Include="DLOption.h" />
+    <ClInclude Include="FTPClass.h" />
+    <ClInclude Include="LoginDlg.h" />
+    <ClInclude Include="ManagerLoginDlg.h" />
+    <ClInclude Include="MessageControl.h" />
+    <ClInclude Include="OrderDlg.h" />
+    <ClInclude Include="platdefines.h" />
+    <ClInclude Include="PowerManager.h" />
+    <ClInclude Include="PublicFunction.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="SQLManager.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Task.h" />
+    <ClInclude Include="ThreadPool.h" />
+    <ClInclude Include="WinRARClass.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ADCT.cpp" />
     <ClCompile Include="ADCTDlg.cpp" />
+    <ClCompile Include="ATOptionDlg.cpp" />
+    <ClCompile Include="DLOption.cpp" />
+    <ClCompile Include="FTPClass.cpp" />
+    <ClCompile Include="LoginDlg.cpp" />
+    <ClCompile Include="ManagerLoginDlg.cpp" />
+    <ClCompile Include="MessageControl.cpp" />
+    <ClCompile Include="OrderDlg.cpp" />
+    <ClCompile Include="PowerManager.cpp" />
+    <ClCompile Include="PublicFunction.cpp" />
+    <ClCompile Include="SQLManager.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Task.cpp" />
+    <ClCompile Include="ThreadPool.cpp" />
+    <ClCompile Include="WinRARClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ADCT.rc" />
@@ -206,7 +237,7 @@
     <None Include="res\ADCT.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\ADCT.ico" />
+    <Image Include="res\favicon.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

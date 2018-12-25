@@ -30,6 +30,51 @@
     <ClInclude Include="Resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="MessageControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PublicFunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FTPClass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WinRARClass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DLOption.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="platdefines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ManagerLoginDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Task.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CRC.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ATOptionDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ADCT.cpp">
@@ -39,6 +84,45 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PublicFunction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FTPClass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WinRARClass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLOption.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ManagerLoginDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Task.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ATOptionDlg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,7 +137,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\ADCT.ico">
+    <Image Include="res\favicon.ico">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>
