@@ -136,7 +136,7 @@ void PowerManager::ListenThread()
 		}*/
 		do
 		{
-			Sleep(50);
+			Sleep(200);
 		} while (ReadOff==false&&!s_bExit == false);
 		if (bReadStat)
 		{
@@ -197,6 +197,7 @@ void PowerManager::SendThread()
 			dwBytesWrite = SendPortBuffer.length();
 			if (SendPortBuffer == "")
 			{
+				Sleep(atoi(SleepTimer));
 				continue;
 			}
 			BYTE * SendByte = pf.CStrToByte(SendPortBuffer.length(), SendPortBuffer.data());
@@ -253,7 +254,7 @@ void PowerManager::CommandListListen()
 	do
 	{
 
-
+		Sleep(1000);
 		for (int i = 0; i < 4; i++)
 		{
 			GetTemp = CommandListBackup.GetAt(i);
