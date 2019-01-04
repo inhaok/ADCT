@@ -154,14 +154,15 @@ void PowerManager::ListenThread()
 			{
 				for (int i = 0; i < 8; i++)
 				{
-					temp.Format("%02X", strtemp[i]);
-					GetPortRecv += temp;
-					ReadOff = false;
+					temp.Format("%02lX", (unsigned char)strtemp[i]);
+					GetPortRecv = GetPortRecv+temp;
+					
 				}
+				ReadOff = false;
 			}
-			catch (const std::exception&)
+			catch (CMemoryException &e)
 			{
-
+				return;
 			}
 			
 			//PurgeComm(hCom,PURGE_RXCLEAR | PURGE_TXCLEAR);
@@ -224,6 +225,10 @@ void PowerManager::ReadPortRecvList()
 		string getIn, getTemp, firstRead, doubleRead;
 		do
 		{
+			do
+			{
+				Sleep(100);
+			} while (ReadOff);
 			Sleep(50);
 			for (int i = 0; i < 4; i++)
 			{
